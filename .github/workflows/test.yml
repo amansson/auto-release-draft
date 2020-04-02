@@ -12,11 +12,10 @@ jobs:
          matrix:
             os: [ubuntu-latest]
       steps:
-         - name: Get the sources
+      - name: Get the sources
          uses: actions/checkout@v1
-         - name: Create a release draft for a version tag
+      - name: Create a release draft for a version tag
          id: create-release-draft
          uses: ./
-         - name: Print the URL of the release draft
+      - name: Print the URL of the release draft
          run: echo ${{ steps.create-release-draft.outputs.release.url }}
-         
